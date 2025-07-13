@@ -1,0 +1,66 @@
+{
+  "name": "agvm",
+  "version": "1.0.0-beta.0",
+  "main": "dist/index.js",
+  "bin": {
+    "agvm": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "nodemon --exec ./node_modules/.bin/ts-node src/index",
+    "install-cli-local": "npm run build && npm install -g .",
+    "prepare": "husky || true",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "npm run lint --fix",
+    "prettier": "npx prettier --check src",
+    "prettier:fix": "prettier --write src",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
+  },
+  "engines": {
+    "node": ">=18.19.0"
+  },
+  "keywords": [
+    "angular",
+    "cli",
+    "angular-cli",
+    "version-manager",
+    "agvm",
+    "nvm",
+    "node",
+    "angular-version-manager"
+  ],
+  "author": "Robert Idarraga Muñoz",
+  "license": "MIT",
+  "description": "Cross-platform Angular CLI version manager.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stiven0/agvm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stiven0/agvm/issues"
+  },
+  "homepage": "https://github.com/stiven0/agvm#readme",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "figlet": "^1.8.0",
+    "semver": "^7.7.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^22.10.10",
+    "@types/semver": "^7.7.0",
+    "eslint": "^9.30.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.6.2",
+    "standard-version": "^9.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.35.0"
+  }
+}

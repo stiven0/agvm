@@ -1,0 +1,10 @@
+.git
+.github
+test/
+*.spec.ts
+src/
+tsconfig.json
+.eslintrc.config.json
+.prettierrc
+.prettierrcignore
+commitlint.config.js

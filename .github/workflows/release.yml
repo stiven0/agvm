@@ -1,0 +1,36 @@
+# name: Release on Dev
+
+# on:
+#   push:
+#     branches: [dev]
+
+# jobs:
+#   bump-and-changelog:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+
+#       - name: Install dependencies
+#         run: npm ci
+
+#       - name: Bump version & update CHANGELOG
+#         run: npm run release
+
+#       - name: Commit & push version bump
+#         run: |
+#           git config user.name "github-actions[bot]"
+#           git config user.email "github-actions[bot]@users.noreply.github.com"
+#           git add package.json CHANGELOG.md
+#           git commit -m "chore(release): bump version and update changelog [ci skip]"
+#           git tag v$(node -p "require('./package.json').version")
+#           git push origin dev --follow-tags
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

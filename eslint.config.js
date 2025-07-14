@@ -6,7 +6,8 @@ const eslintConfigPrettier = require('eslint-config-prettier/flat');
 
 module.exports = tseslint.config(
   {
-    files: ['**/*.ts'],
+    files: ['src/**/*.ts'],
+    ignores: ['dist/**', 'node_modules/**'],
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,

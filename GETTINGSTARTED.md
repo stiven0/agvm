@@ -60,7 +60,7 @@ npm install -g ./agvm-x.x.x.tgz # agvm - You now have the command available to t
 - Uninstall package:
 
 ```bash
-npm install -g agvm
+npm uninstall -g agvm
 ```
 
 Thus installing the generated **.tgz** simulates the behavior of **npm install -g agvm**

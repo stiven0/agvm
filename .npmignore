@@ -8,3 +8,4 @@ tsconfig.json
 .prettierrc
 .prettierrcignore
 commitlint.config.js
+*.tgz
